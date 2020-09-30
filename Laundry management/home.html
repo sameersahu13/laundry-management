@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Laundry Management</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="C:\Users\Sameer\Desktop\Laundry management\css\bootstrap.min.css">
+  <link rel="stylesheet" href="C:\Users\Sameer\Desktop\Laundry management\css\bootstrap-theme.min.css">
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="C:\Users\Sameer\Desktop\Laundry management\assets\css\font-awesome.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="C:\Users\Sameer\Desktop\Laundry management\css\AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="C:\Users\Sameer\Desktop\Laundry management\css\_all-skins.min.css">
+
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!-- Site wrapper -->
+  <div class="wrapper">
+
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="home.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>C</b>P</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="home.html"><b>LAU</b>NDRY SYSTEM</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <style>
+          hr.solid {
+            border-top: 3px solid #bbb;
+          }
+
+          .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+
+          .button2 {
+            background-color: #ff6702;
+          }
+          .button1 {
+            background-color: blue;
+
+          }
+
+          /* Blue */
+        </style>
+
+      </nav>
+    </header>
+
+
+    <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+
+        <a href="home.html">
+          <h4>Home</h4>
+        </a>
+        <hr class="solid">
+        <a href="myorders.html">
+          <h4>My Orders</h4>
+        </a>
+        <hr class="solid">
+        <a href="mycart.html">
+          <h4>My Cart</h4>
+        </a>
+        <hr class="solid">
+        <a href="about.html">
+          <h4>About</h4>
+        </a>
+        <hr class="solid">
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- =============================================== -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          <small>Welcome to Laundry Management</small>
+        </h1>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+
+        <!-- Default box -->
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">Home</h3>
+            <div class="box-tools pull-right">
+              <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i
+                  class="fa fa-minus"></i></button>
+              <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i
+                  class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <!-- Start creating your amazing application! -->
+            <button id="newLaun" type="button" class="btn btn-success btn-sm">
+              New Laundry
+            </button>
+            <button id="claim" type="button" class="btn btn-primary btn-sm">
+              Claim
+            </button>
+
+            <button id="delLaun" type="button" class="btn btn-danger btn-sm">
+              Delete
+            </button>
+            <div id="table-laundry"></div>
+          </div><!-- /.box-body -->
+          <div class="box-footer">
+            <!-- Footer -->
+          </div><!-- /.box-footer-->
+        </div><!-- /.box -->
+
+        <section class="content" id="newLaun">
+
+          <h3>Select your choice as for your required:</h3>
+          <form>
+            <label>Select Your Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="mail">male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female"> female</label>
+
+
+            <br><br>
+            <form action="/action_page.php">
+              <label>Choose your Cloth type:</label><br>
+              <input type="checkbox" name="cloths" value="cloths">
+              <label for="vehicle1"> Jackets and coats</label><br>
+              <input type="checkbox" name="cloths" value="cloths">
+              <label for="vehicle2"> Suits</label><br>
+              <input type="checkbox" name="cloths" value="cloths">
+              <label for="vehicle3"> Skirts and dresses</label><br>
+              <input type="checkbox" name="cloths" value="cloths">
+              <label for="vehicle3"> Shoes, boots and slippers</label><br>
+              <input type="checkbox" name="cloths" value="cloths">
+              <label for="cloths  "> Sweaters and waistcoats</label>
+            </form><br>
+
+          </form>
+          <form action="/action_page.php">
+            <label for="cloths">Type of Fabric:</label>
+            <select id="cloths" name="cloths">
+              <option>Cotton</option>
+              <option>Canvas </option>
+              <option>Chiffon</option>
+              <option>Damask</option>
+              <option>Georgette</option>
+            </select><br><br>
+            <button class="button button2">ADD TO CART</button>
+            <button class="button button1"> BUY NOW</button>
+            
+          </form>
+
+        </section>
+
+      </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+    <footer style=" color: honeydew; background-color:rgba(21, 20, 26, 0.651);" class="main-footer">
+
+      <strong>Copyright &copy; 2020 <a href="#">Laundry Management.</a></strong> <br>Brought To You By: <a
+        href="#"><b>Sameer Sahu</b></a>
+    </footer>
+
+    <div class="control-sidebar-bg"></div>
+  </div><!-- ./wrapper -->
+
+
+</body>
+
+</html>
